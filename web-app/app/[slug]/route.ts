@@ -13,6 +13,24 @@ export async function GET(
 
   const client = await connectDB();
 
+const json = [
+  {
+    ref: "R1",
+    positions: [
+      [5, 10],
+      [5, 15]
+    ]
+  },
+  {
+    ref: "LED1",
+    positions: [
+      [7, 12],
+      [7, 13]
+    ]
+  }
+];
+
+
   const db = client!.db();
   const collection = db.collection("netlists");
 
@@ -34,5 +52,5 @@ export async function GET(
 
   console.log(parsed);
 
-  return NextResponse.json({ id: slug, data: parsed });
+  return NextResponse.json({ id: slug, data: json });
 }
