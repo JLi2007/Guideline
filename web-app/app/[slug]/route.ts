@@ -52,5 +52,5 @@ const json = [
 
   console.log(parsed);
 
-  return NextResponse.json({ id: slug, data: json });
+  return NextResponse.json({ id: slug, data: parsed });
 }

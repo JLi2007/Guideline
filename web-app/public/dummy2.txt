@@ -1,0 +1,46 @@
+* Dummy Netlist for Breadboard Demo Project
+* Generated on May 18, 2025
+
+.title Simple LED Circuit with Microcontroller
+.version 1.0
+
+* Power Supply
+V1 VCC GND 5V
+
+* Microcontroller (Arduino Nano)
+XU1 D0 D1 D2 D3 D4 D5 D6 D7 A0 A1 A2 A3 A4 A5 VCC GND RESET ARDUINO_NANO
+
+* Resistors
+R1 D2 NODE1 220
+R2 D3 NODE2 220
+R3 VCC A0 10k
+R4 A1 GND 10k
+
+* LEDs
+D1 NODE1 GND LED_RED
+D2 NODE2 GND LED_GREEN
+
+* Capacitors
+C1 VCC GND 100uF
+C2 RESET GND 100nF
+
+* Push Button Switch
+SW1 VCC A0 SW_PUSH
+
+* Connections to breadboard
+* Component: R1
+* Pins: [5, 10], [5, 15]
+
+* Component: LED1
+* Pins: [7, 12], [7, 13]
+
+* Component: C1
+* Pins: [3, 8], [3, 12]
+
+* Component: IC1 (Arduino)
+* Pins: [2, 5], [2, 6], [2, 7], [2, 8], [7, 5], [7, 6], [7, 7], [7, 8]
+
+* Component: SW1
+* Pins: [9, 20], [9, 22]
+
+.end
